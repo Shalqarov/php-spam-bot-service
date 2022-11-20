@@ -37,6 +37,7 @@ $app->addErrorMiddleware(true, true, true);
 $app->add(TwigMiddleware::create($app, $twig));
 
 $app->get('/history', Controllers\IndexController::class . ':history');
-
+$app->get('/send', Controllers\MessageController::class . ':createMessage');
+$app->post('/send', Controllers\MessageController::class . ':sendMessage');
 
 $app->run();
