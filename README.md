@@ -1,8 +1,14 @@
 # php-spam-bot-service
-Как запустить сервис: 
-Скачать все зависимости
-1. ```bash composer install```
-Запустить миграцию
-2. ```./vendor/bin/doctrine-migrations migrate```
-Запустить сервис
-3. ```php -S localhost:8000 public/index.php```
+<h2>Как запустить сервис:<h2>
+
+1.Скачиваем зависимости:
+
+```composer install```
+
+2.Запускаем миграцию:
+
+```./vendor/bin/doctrine-migrations migrate```
+
+3.Запускам сервис: 
+
+```php -S localhost:8000 public/index.php```
