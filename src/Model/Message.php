@@ -10,7 +10,7 @@ use Doctrine\ORM\Mapping\Id;
 use Doctrine\ORM\Mapping\Table;
 
 #[Entity]
-#[Table('adverts')]
+#[Table('messages')]
 class Message
 {
     #[Id]
