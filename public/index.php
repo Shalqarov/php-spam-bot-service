@@ -1,7 +1,9 @@
 <?php
 
+require_once __DIR__ . '/../vendor/autoload.php';
+
 use App\Config;
-use DI\Container;
+use App\Http\Controllers;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\ORMSetup;
 use Dotenv\Dotenv;
@@ -9,16 +11,12 @@ use Slim\Factory\AppFactory;
 use Slim\Views\Twig;
 use Slim\Views\TwigMiddleware;
 use Twig\Error\LoaderError;
+use DI\Container;
 use function DI\create;
 
-require_once __DIR__ . '/../vendor/autoload.php';
-
 try {
-    $twig = Twig::create(
-        __DIR__ . '/../template',
-        ['cache' => false]
-    );
-} catch (LoaderError $e){
+    $twig = Twig::create(__DIR__ . '/../template', ['cache' => false]);
+} catch (LoaderError $e) {
     die(500);
 }
 
@@ -37,5 +35,8 @@ AppFactory::setContainer($container);
 $app = AppFactory::create();
 $app->addErrorMiddleware(true, true, true);
 $app->add(TwigMiddleware::create($app, $twig));
+
+$app->get('/history', Controllers\IndexController::class . ':history');
+
 
 $app->run();

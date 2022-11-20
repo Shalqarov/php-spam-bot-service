@@ -1,0 +1,11 @@
+{% extends "base.twig" %}
+
+{% block body %}
+    <h1>История сообщений</h1>
+
+    <ul>
+        {% for msg in messages %}
+            <li>{{ msg.getMessage() }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
