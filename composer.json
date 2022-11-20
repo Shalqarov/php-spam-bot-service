@@ -13,6 +13,8 @@
         "symfony/cache": "^6.1",
         "doctrine/migrations": "^3.5",
         "vlucas/phpdotenv": "^5.5",
-        "php-di/php-di": "^6.4"
+        "php-di/php-di": "^6.4",
+      "ext-curl": "*",
+        "guzzlehttp/guzzle": "^7.0"
     }
 }
