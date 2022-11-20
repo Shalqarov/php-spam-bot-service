@@ -9,6 +9,6 @@
 
 ```./vendor/bin/doctrine-migrations migrate```
 
-3.Запускам сервис: 
+3.Запускаем сервис: 
 
 ```php -S localhost:8000 public/index.php```
