@@ -1,3 +1,4 @@
 # php-spam-bot-service
-Как запустить бота 
-1. ```composer install```
+Как запустить сервис: 
+1. ```bash composer install```
+2. 
