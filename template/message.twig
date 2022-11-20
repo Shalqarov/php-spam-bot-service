@@ -13,7 +13,7 @@
             {% endfor %}
         </ul>
     {% endif %}
-    <form action="/send" method="post">
+    <form action="/" method="post">
         <div>
             <label>
                 Сообщение *
@@ -26,4 +26,5 @@
         <br>
         <input type="submit" value="SPAM">
     </form>
+    <a href="/history">Просмотреть историю сообщений</a>
 {% endblock %}
