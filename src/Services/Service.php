@@ -20,7 +20,7 @@ class Service implements InterfaceService
             ->select('m')
             ->from(Message::class, 'm')
             ->getQuery()
-            ->getArrayResult();
+            ->getResult();
     }
 
     public function setItem(array $data): Message
