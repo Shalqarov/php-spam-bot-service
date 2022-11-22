@@ -3,12 +3,20 @@
 
 1.Скачиваем зависимости:
 
-```composer install```
+```
+composer install
+```
+2.Разворачиваем бд
+3.Настраиваем env
 
-2.Запускаем миграцию:
+4.Запускаем миграцию:
 
-```./vendor/bin/doctrine-migrations migrate```
+```
+./vendor/bin/doctrine-migrations migrate
+```
 
-3.Запускаем сервис: 
+5.Запускаем сервис: 
 
-```php -S localhost:8000 public/index.php```
+```
+php -S localhost:8000 public/index.php
+```
